@@ -1,0 +1,9 @@
+
+**/.vscode
+**/.vagrant
+
+**/.DS_Store
+
+*.pem
+*.crt
+*.key
