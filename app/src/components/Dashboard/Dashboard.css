@@ -1,10 +1,19 @@
 /* Required height of parents of the Full Page Carousel for proper displaying carousel itself */
 
+@font-face {
+  font-family: Poppins;
+  src: url(../../Assets/fonts/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Axiforma;
+  src: url(../../Assets/fonts/axiforma/Axiforma-Regular.ttf);
+}
+
 html,
 body,
 .view {
   height: 100%;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-weight: 600;
   font-size: 16px;
 }
@@ -120,11 +129,11 @@ input.form-control {
     padding-left: 1.5rem;
   }
   .bottom-intro span::before {
-    content: "";
+    content: '';
     white-space: pre;
   }
   .bottom-myName span::before {
-    content: "";
+    content: '';
     white-space: pre;
   }
 }
@@ -1271,7 +1280,7 @@ ul.stepper li.completed a .label {
 }
 
 .progress:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -1444,7 +1453,7 @@ ul.stepper li.completed a .label {
     line-height: 50px;
   }
   .bottom-intro::before {
-    content: "";
+    content: '';
   }
   .sysicons,
   .sysicons-myPeer {
@@ -1709,7 +1718,7 @@ video {
     background: currentColor;
     opacity: 0;
     transition: opacity 300ms;
-} 
+}
 */
 
 .Phone {
@@ -1728,7 +1737,7 @@ video {
 .Phone::before,
 .Phone::after {
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .mic {
@@ -2317,7 +2326,7 @@ p.encrpted {
   font-size: 1rem;
   align-items: center;
   flex-shrink: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 1;
   user-select: none;
   border-radius: 50%;
@@ -2668,8 +2677,8 @@ canvas {
   display: none;
 }
 .controls-fonts {
-  font-family: "poppins";
-  cursor: "pointer";
+  font-family: 'poppins';
+  cursor: 'pointer';
 }
 @media (max-width: 433px) {
   .controls-fonts {
@@ -2801,14 +2810,6 @@ input:-webkit-autofill,
 .login-box:-webkit-autofill {
   -webkit-transition-delay: 9999999s;
 }
-@font-face {
-  font-family: Poppins;
-  src: url(../../Assets/Poppins/Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: Axiforma;
-  src: url(../../Assets/Axiforma/Axiforma-Regular.ttf);
-}
 .call-control-bar {
   border-radius: 10px;
   background-color: #1d2731;
@@ -2846,7 +2847,7 @@ input:-webkit-autofill,
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 50%;
@@ -3028,7 +3029,7 @@ margin: 0px;
   }
 }
 .flaticon {
-  content: "\f18d";
+  content: '\f18d';
 }
 .coloring {
   filter: invert(100%);

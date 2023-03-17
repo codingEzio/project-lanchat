@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import "./CallControlBar.css";
-import Add from "../../Assets/CallControlBar/add.svg";
-import Message from "../../Assets/CallControlBar/message.svg";
-import Mic from "../../Assets/CallControlBar/mic.svg";
-import Video from "../../Assets/CallControlBar/video.svg";
-import Phone from "../../Assets/CallControlBar/phoneRed.svg";
-import Tooltip from "@material-ui/core/Tooltip";
+import React, { Component } from 'react';
+import './CallControlBar.css';
+
+import Add from '../../Assets/images/add.svg';
+import Mic from '../../Assets/images/mic.svg';
+import Video from '../../Assets/images/video_camera.svg';
+import Phone from '../../Assets/images/hangup.svg';
+
+import Tooltip from '@material-ui/core/Tooltip';
+
 export default class CallControlBar extends Component {
   copyUrl = () => {
     var url = window.location.href;
@@ -20,7 +22,7 @@ export default class CallControlBar extends Component {
             <a
               id="muteButton"
               onClick={() => {
-                this.props.callingControls("Mute");
+                this.props.callingControls('Mute');
               }}
               data-toggle="tooltip"
               data-placement="top"
@@ -41,7 +43,7 @@ export default class CallControlBar extends Component {
             <a
               id="toggleVideo"
               onClick={() => {
-                this.props.callingControls("Camera");
+                this.props.callingControls('Camera');
               }}
             >
               {!this.props.isVideo ? (
@@ -59,7 +61,7 @@ export default class CallControlBar extends Component {
             <a
               id="hangupButton"
               onClick={() => {
-                this.props.callingControls("HangUp");
+                this.props.callingControls('HangUp');
               }}
               data-toggle="tooltip"
               data-placement="top"

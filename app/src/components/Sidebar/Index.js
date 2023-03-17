@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
-import logo_s from '../../Assets/Sidebar/logoIcon.png';
-import logo_m from '../../Assets/Sidebar/logoIcon@2x.png';
-import logo_l from '../../Assets/Sidebar/logoIcon@3x.png';
-import info from '../../Assets/Sidebar/info.svg';
+
+import logo_s from '../../Assets/images/logoIcon.png';
+import logo_m from '../../Assets/images/logoIcon@2x.png';
+import logo_l from '../../Assets/images/logoIcon@3x.png';
+
+import info from '../../Assets/images/info.svg';
+
 import { Dialog, DialogTitle } from '@material-ui/core';
 
 export default class Sidebar extends Component {

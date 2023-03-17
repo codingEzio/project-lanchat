@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
 import { Navbar, NavbarBrand, Nav } from 'react-bootstrap';
-import SearchIcon from '../../Assets/Header/search.svg';
-import LANChatLogo from '../../Assets/Logo/LANChatLogo.png';
+import SearchIcon from '../../Assets/images/search.svg';
+import LANChatLogo from '../../Assets/images/logo.png';
 
 export default class Header extends Component {
   constructor() {
