@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
 
-import logo_s from '../../Assets/images/logoIcon.png';
-import logo_m from '../../Assets/images/logoIcon@2x.png';
-import logo_l from '../../Assets/images/logoIcon@3x.png';
+import logo_s from '../../assets/images/logoIcon.png';
+import logo_m from '../../assets/images/logoIcon@2x.png';
+import logo_l from '../../assets/images/logoIcon@3x.png';
 
-import info from '../../Assets/images/info.svg';
+import info from '../../assets/images/info.svg';
 
 import { Dialog, DialogTitle } from '@material-ui/core';
 

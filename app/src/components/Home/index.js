@@ -7,16 +7,16 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import { Avatar } from '@material-ui/core';
 
-import videoCall from '../../Assets/images/video_camera.svg';
-import Attachments from '../../Assets/images/paperclip.svg';
-import audioCall from '../../Assets/images/phone.svg';
-import Cross from '../../Assets/images/close.svg';
-import Pencil from '../../Assets/images/pencil.svg';
+import videoCall from '../../assets/images/video_camera.svg';
+import Attachments from '../../assets/images/paperclip.svg';
+import audioCall from '../../assets/images/phone.svg';
+import Cross from '../../assets/images/close.svg';
+import Pencil from '../../assets/images/pencil.svg';
 
-import Android from '../../Assets/images/os-android.png';
-import Ios from '../../Assets/images/os-ios.png';
-import Mac from '../../Assets/images/os-mac.png';
-import Windows from '../../Assets/images/os-window.png';
+import Android from '../../assets/images/os-android.png';
+import Ios from '../../assets/images/os-ios.png';
+import Mac from '../../assets/images/os-mac.png';
+import Windows from '../../assets/images/os-window.png';
 
 const result = Bowser.getParser(window.navigator.userAgent);
 const macImg = Mac;

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './CallControlBar.css';
 
-import Add from '../../Assets/images/add.svg';
-import Mic from '../../Assets/images/mic.svg';
-import Video from '../../Assets/images/video_camera.svg';
-import Phone from '../../Assets/images/hangup.svg';
+import Add from '../../assets/images/add.svg';
+import Mic from '../../assets/images/mic.svg';
+import Video from '../../assets/images/video_camera.svg';
+import Phone from '../../assets/images/hangup.svg';
 
 import Tooltip from '@material-ui/core/Tooltip';
 

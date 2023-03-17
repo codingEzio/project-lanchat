@@ -13,7 +13,7 @@ import './Dashboard.css';
 import ReactNotification from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
-import Ringtone from '../../Assets/audios/incoming_call_ring.mp3';
+import Ringtone from '../../assets/audios/incoming_call_ring.mp3';
 
 import Bowser from 'bowser';
 import $ from 'jquery';

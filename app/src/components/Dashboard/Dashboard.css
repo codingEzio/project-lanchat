@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: Poppins;
-  src: url(../../Assets/fonts/poppins/Poppins-Regular.ttf);
+  src: url(../../assets/fonts/poppins/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: Axiforma;
-  src: url(../../Assets/fonts/axiforma/Axiforma-Regular.ttf);
+  src: url(../../assets/fonts/axiforma/Axiforma-Regular.ttf);
 }
 
 html,

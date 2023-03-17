@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import '../Dashboard/Dashboard.css';
 import { Avatar } from '@material-ui/core';
 
-import Add from '../../Assets/images/add.svg';
-import Mic from '../../Assets/images/mic.svg';
-import Video from '../../Assets/images/video_camera.svg';
-import Phone from '../../Assets/images/hangup.svg';
-import Copy from '../../Assets/images/copy.svg';
-import Link from '../../Assets/images/link.svg';
+import Add from '../../assets/images/add.svg';
+import Mic from '../../assets/images/mic.svg';
+import Video from '../../assets/images/video_camera.svg';
+import Phone from '../../assets/images/hangup.svg';
+import Copy from '../../assets/images/copy.svg';
+import Link from '../../assets/images/link.svg';
 
-import PhoneCall from '../../Assets/images/phone.svg';
-import VideoCall from '../../Assets/images/video_camera.svg';
-import Close from '../../Assets/images/close.svg';
-import Pencil from '../../Assets/images/pencil.svg';
+import PhoneCall from '../../assets/images/phone.svg';
+import VideoCall from '../../assets/images/video_camera.svg';
+import Close from '../../assets/images/close.svg';
+import Pencil from '../../assets/images/pencil.svg';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
