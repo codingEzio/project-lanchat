@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
 
-import logo_s from '../../assets/images/logoIcon.png';
-import logo_m from '../../assets/images/logoIcon@2x.png';
-import logo_l from '../../assets/images/logoIcon@3x.png';
+import logo_s from '../../assets/images/logoicon.png';
+import logo_m from '../../assets/images/logoicon@2x.png';
+import logo_l from '../../assets/images/logoicon@3x.png';
 
 import info from '../../assets/images/info.svg';
 
