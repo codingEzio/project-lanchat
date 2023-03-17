@@ -1,4 +1,4 @@
-body{
+body {
   background-image: linear-gradient(89deg, #374858 10%, #1c2630 90%) !important;
   overflow: hidden;
 }
@@ -44,5 +44,5 @@ body{
 
 @font-face {
   font-family: Poppins;
-  src: url(./Assets/Poppins/Poppins-Regular.ttf);
+  src: url(./assets/fonts/poppins/Poppins-Regular.ttf);
 }
