@@ -1,12 +1,10 @@
 from flask_restful import Resource, Api
-from flask import jsonify, Flask, request
-from flask_cors import CORS, cross_origin
+from flask import Flask, request
+from flask_cors import CORS
 
 # This was hardcoded in the `discoveryserver/WebSocketMainWS.cpp`::CheckURL
 # You could set this to something safer like (I think) JWT, short code?
-SECERT_KEY1 = "z/EahGU31q1G5L14763UItXD6dI2X57RlUS7CI2n43g="
-
-SECERT_KEY2 = "zEahGU31q1G5L14763UItXD6dI2X57RlUS7CI2n43g"
+SECERT_KEY = "z/EahGU31q1G5L14763UItXD6dI2X57RlUS7CI2n43g="
 
 
 class checkurl(Resource):
@@ -15,8 +13,8 @@ class checkurl(Resource):
         print(data)
         secertkey = data['secretkey']
         if secertkey:
-            if secertkey == SECERT_KEY1 or secertkey == SECERT_KEY2:
-                return { "valid": True, "msg": "Welcome to trango"}
+            if secertkey == SECERT_KEY:
+                return { "valid": True, "msg": "Welcome to LANChat"}
             else:
                 return { "valid": False, "msg": "Secert key not found"}
         else:
