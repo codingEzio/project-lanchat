@@ -5,6 +5,8 @@ unordered_map<string, list<PeerData *> *> WebSocketMainWS::networkMap;
 pthread_mutex_t WebSocketMainWS::peerMapLock = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t WebSocketMainWS::networkMapLock = PTHREAD_MUTEX_INITIALIZER;
 
+/* Public lifecycle methods waiting to be called by the frontend React */
+
 void WebSocketMainWS::OnConnected(
     shared_ptr<WsServer::Connection> hConnection) {
   string email = hConnection->query_string;
@@ -120,6 +122,41 @@ void WebSocketMainWS::OnError(shared_ptr<WsServer::Connection> hConnection,
     cout << "other exception" << endl;
   }
 }
+
+void WebSocketMainWS::NetworkDetection() {
+  unordered_map<string, PeerData *>::iterator itr = peerMap.begin();
+  while (itr != peerMap.end()) {
+    string email = itr->first;
+    PeerData *pData = itr->second;
+    if (pData->m_isAlive == false) {
+      string email = pData->m_email;
+      if (!email.empty()) {
+        if (peerMap.find(email) != peerMap.end()) {
+          if (pthread_mutex_lock(&peerMapLock) != 0) {
+            cout << "DeletePeer: Unable to enquire lock" << endl;
+            return;
+          }
+          //  delete peerMap[email];
+          SendPeersInfo(pData, "delpeer");
+          itr = peerMap.erase(itr);
+          if (pthread_mutex_unlock(&peerMapLock) != 0) {
+            cout << "DeletePeer: Unable to release lock" << endl;
+            return;
+          }
+        }
+      } else {
+        cout << "DeletePeer: Empty Email String" << endl;
+      }
+    } else {
+      pthread_mutex_lock(&peerMapLock);
+      pData->m_isAlive = false;
+      pthread_mutex_unlock(&peerMapLock);
+      itr++;
+    }
+  }
+}
+
+/* Private methods that would be used for the lifecycle ones */
 
 bool WebSocketMainWS::RegisterPeer(shared_ptr<WsServer::Connection> hConnection,
                                    json data) {
@@ -423,39 +460,6 @@ void WebSocketMainWS::PartRoom(shared_ptr<WsServer::Connection> hConnection) {
   }
   pthread_mutex_unlock(&networkMapLock);
   pthread_mutex_unlock(&peerMapLock);
-}
-
-void WebSocketMainWS::NetworkDetection() {
-  unordered_map<string, PeerData *>::iterator itr = peerMap.begin();
-  while (itr != peerMap.end()) {
-    string email = itr->first;
-    PeerData *pData = itr->second;
-    if (pData->m_isAlive == false) {
-      string email = pData->m_email;
-      if (!email.empty()) {
-        if (peerMap.find(email) != peerMap.end()) {
-          if (pthread_mutex_lock(&peerMapLock) != 0) {
-            cout << "DeletePeer: Unable to enquire lock" << endl;
-            return;
-          }
-          //  delete peerMap[email];
-          SendPeersInfo(pData, "delpeer");
-          itr = peerMap.erase(itr);
-          if (pthread_mutex_unlock(&peerMapLock) != 0) {
-            cout << "DeletePeer: Unable to release lock" << endl;
-            return;
-          }
-        }
-      } else {
-        cout << "DeletePeer: Empty Email String" << endl;
-      }
-    } else {
-      pthread_mutex_lock(&peerMapLock);
-      pData->m_isAlive = false;
-      pthread_mutex_unlock(&peerMapLock);
-      itr++;
-    }
-  }
 }
 
 bool WebSocketMainWS::CheckURL(string authKey) {
